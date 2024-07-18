@@ -114,7 +114,8 @@ header {
     /* width: 100%; */
 
     img {
-        max-height: 100%;
+        height: 35vh;
+        object-fit: cover;
         width: 100%;
     }
 
@@ -148,6 +149,8 @@ section {
     /* position: relative; */
     /* bottom: 400px; */
 
+    position: relative;
+    bottom: 15vh;
     max-width: 1400px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -182,11 +185,17 @@ section {
 
 }
 
-@media screen and (min-width: 1600px) {
-    section {
+@media screen and (min-width: 1000px) {
+    header {
 
-        position: relative;
-        bottom: 400px;
+        img {
+            height: 120vh;
+        }
+
+    }
+
+    section {
+        bottom: 70vh;
     }
 }
 
@@ -333,8 +342,24 @@ footer {
 
 .mobileNav {
     position: fixed;
-    bottom: 0;
+    bottom: 15px;
+    left: 0;
+    right: 0;
     z-index: 50;
+    border-radius: 10px;
+
     box-shadow: 0px -2px 2px rgb(40,40,40);
+
+    max-width: 500px;
+    margin: 0 auto;
 }
+
+@media screen and (max-width: 550px) {
+    .mobileNav {
+        width: -webkit-fill-available;
+        margin-inline: 15px;
+    }
+}
+
+
 
